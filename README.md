@@ -71,5 +71,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### Docker
 
-LOCAL RUN
+LOCAL RUN change
 `docker build -f Dockerfile.dev .`
