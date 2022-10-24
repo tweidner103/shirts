@@ -2,24 +2,7 @@ version: '3'
 services:
   web:
     build:
-      # where to pull from, current working directory
       context: .
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
     ports:
-      - "3000:3000"
-    volumes:
-      # node modules already in docker
-      - /app/node_modules
-      # .:/app is anything before app
-      - .:/app
-  tests:
-    build:
-      # where to pull from, current working directory
-      context: .
-      dockerfile: Dockerfile.dev
-    volumes:
-      # node modules already in docker
-      - /app/node_modules
-      # .:/app is anything before app
-      - .:/app
-    command: ['npm', 'run', 'test']
+      - '80:80'

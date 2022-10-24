@@ -8,3 +8,14 @@ before_install:
 
 script:
   - docker run -e CI=true tweidner103/shirts npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-west-1"
+  app: "shirts"
+  env: "Shirts-env"
+  # s3 bucket name
+  bucket_name: "elasticbeanstalk-us-west-1-741024833687"
+  bucket_path: "shirts"
+  on:
+    branch: master
