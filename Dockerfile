@@ -8,4 +8,5 @@ RUN npm run build
 # /app/build <- important folder
 # production server
 FROM nginx:1.21.6
+# EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
